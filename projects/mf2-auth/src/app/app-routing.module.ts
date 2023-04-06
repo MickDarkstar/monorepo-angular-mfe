@@ -7,10 +7,9 @@ const routes: Routes = [{
   component: HomeComponent,
   pathMatch: 'full'
 }, {
-  path: 'items',
-  loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
-}
-];
+  path: 'auth',
+  loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
